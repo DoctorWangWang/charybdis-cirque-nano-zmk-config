@@ -47,18 +47,18 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)  RC(3,6)  RC(3,7) RC(3,8) RC(3,9
 &nice_nano_spi {
     compatible = "nordic,nrf-spim";
   status = "disabled";  
-    sck-pin = <31>; 
+    sck-pin = <8>; 
     miso-pin = <17>; 
     mosi-pin = <17>; 
   
-    cs-gpios = <&gpio0 29 GPIO_ACTIVE_LOW>; 
+    cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>; 
 
     trackball: trackball@0 {
         status = "disabled";
         compatible = "pixart,pmw3610";
         reg = <0>;
         label = "TRACKBALL";
-        irq-gpios = <&gpio0 8  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        irq-gpios = <&gpio0 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         spi-max-frequency = <2000000>;
        duplex = <2048>;
     };
