@@ -21,6 +21,10 @@
 
 &nice_nano_spi {
     status = "okay";
+  sck-pin = <31>;
+  mosi-pin = <17>;
+  miso-pin = <17>; // same as mosi (3-wire spi)
+  cs-gpios = <&gpio0 29 GPIO_ACTIVE_LOW>;
 };
 
 &trackball {
